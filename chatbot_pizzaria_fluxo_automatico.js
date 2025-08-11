@@ -41,7 +41,8 @@ const client = new Client({
 client.on('qr', qr => {
     console.clear();
     console.log('📲 Escaneie o QR Code abaixo para conectar:');
-    qrcode.generate(qr, { small: true });
+    // Alteração feita aqui para imprimir a string do QR Code
+    console.log(qr);
 });
 
 client.on('ready', () => {
